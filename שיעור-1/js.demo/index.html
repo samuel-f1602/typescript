@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ts & vite</title>
+</head>
+
+<body>
+    <script>
+        //why do we need typescript?
+        //1. static typing
+
+        let = x = 10;
+        x = 'hello';
+
+        console.log(x);
+
+        //2. function
+        const multi = (a, b) => {
+            return a + b;
+        };
+
+        console.log(multi(10, 20));
+
+        console.log(multi("hello", "world"));
+        //console.log(multi("hello", 5)); //Nan
+        //console.log(multi()); //Nan
+
+        //אם נעשה הכפל ולא הוספה זה ירשום לנו
+        //  (nan)      (add)   (multi)
+        //מסוים type היא דורשת משתנים מסויימים וגם (multi) בגלל שהפונקציה
+        //היא תסמן לי את זה באדום typescriptב
+
+        //3. object
+
+        const person = {
+            name: "john",
+            age: 30,
+        };
+
+        const sayHello = (person) => {
+            console.log(`Hello ${person.name}, you are ${person.age} years old`);
+        };
+
+        sayHello(person) // hello john, you are 30 years old
+        sayHello("moshe") // Hello undefined, you are undefined years old
+        //sayHello(); //error
+
+        // היא לא שפה היא סופרסט היא הרחבה ל Typescript
+        // javascript
+
+        // css היא הרחבה ל sass כמו ש
+
+
+    </script>
+</body>
+
+</html>
